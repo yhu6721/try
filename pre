@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专属定制香水</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f5f5f5, #eae8e8);
+            color: #333;
+        }
+
+        /* 页面容器 */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* 标题 */
+        h1 {
+            text-align: center;
+            color: #6b4f4f;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #6b4f4f;
+        }
+
+        /* 滑动条样式 */
+        .slider-container {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: background 0.3s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #6b4f4f;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .output {
+            text-align: right;
+            margin-top: 5px;
+            color: #777;
+        }
+
+        /* 按钮样式 */
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6b4f4f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #8c6b6b;
+        }
+
+        /* 底部导航 */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .navigation a {
+            color: #6b4f4f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 标题 -->
+        <h1>你的专属定制香水</h1>
+
+        <!-- 问题 1：香水整体氛围 -->
+        <h2>1. 你希望香水的整体氛围如何？</h2>
+        <div class="slider-container">
+            <label for="fresh">清新活力 (0%-100%)</label>
+            <input type="range" id="fresh" name="fresh" min="0" max="100" value="50" oninput="updateValue('fresh', this.value)">
+            <div class="output" id="fresh-output">50%</div>
+        </div>
+
+        <div class="slider-container">
+            <label for="warm">温暖柔和 (0%-100%)</label>
+            <input type="range" id="warm" name="warm" min="0" max="100" value="50" oninput="updateValue('warm', this.value)">
+            <div class="output" id="warm-output">50%</div>
+        </div>
+
+        <div class="slider-container">
+            <label for="elegant">优雅经典 (0%-100%)</label>
+            <input type="range" id="elegant" name="elegant" min="0" max="100" value="50" oninput="updateValue('elegant', this.value)">
+            <div class="output" id="elegant-output">50%</div>
+        </div>
+
+        <div class="slider-container">
+            <label for="mysterious">神秘深邃 (0%-100%)</label>
+            <input type="range" id="mysterious" name="mysterious" min="0" max="100" value="50" oninput="updateValue('mysterious', this.value)">
+            <div class="output" id="mysterious-output">50%</div>
+        </div>
+
+        <div class="slider-container">
+            <label for="sweet">甜美轻快 (0%-100%)</label>
+            <input type="range" id="sweet" name="sweet" min="0" max="100" value="50" oninput="updateValue('sweet', this.value)">
+            <div class="output" id="sweet-output">50%</div>
+        </div>
+
+        <!-- 导航按钮 -->
+        <div class="navigation">
+            <a href="#previous">上一步</a>
+            <a href="#next">下一步</a>
+        </div>
+
+    </div>
+
+    <script>
+        // 更新滑动条的输出值
+        function updateValue(id, value) {
+            document.getElementById(id + '-output').innerText = value + '%';
+        }
+    </script>
+
+</body>
+</html>
