@@ -3,43 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>香水定制</title>
+    <title>香水定制 - 首页</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 首页 -->
-    <section id="home">
-        <div class="container">
-            <h1>首页</h1>
-            <button onclick="goToSection('customize')">开始定制</button>
-        </div>
-    </section>
+    <header>
+        <h1>香水层次感设置</h1>
+    </header>
 
-    <!-- 香水定制 -->
-    <section id="customize" class="hidden">
-        <div class="container">
-            <h1>香水定制</h1>
-            <!-- 在这里可以添加更多的香水定制内容，例如选择香调、香料等 -->
-            <button onclick="goToSection('next')">下一步</button>
-        </div>
-    </section>
+    <main>
+        <section class="intro">
+            <h2>生成你的专属香水</h2>
+            <p>通过我们的网站，您可以根据不同的香水层次感，定制属于您的专属香水。</p>
+            <button id="start-customization">开始定制</button>
+        </section>
+    </main>
 
-    <!-- 下一步 -->
-    <section id="next" class="hidden">
-        <div class="container">
-            <h1>下一步</h1>
-            <button onclick="goToSection('recommend')">下 一 步</button>
-        </div>
-    </section>
+    <footer>
+        <p>&copy; 2024 香水层次感设置. 版权所有.</p>
+    </footer>
 
-    <!-- 推荐配方 -->
-    <section id="recommend" class="hidden">
-        <div class="container">
-            <h1>推荐配方</h1>
-            <a href="https://group3iticket.my.canvasite.cn/" target="_blank" class="button">生成卡片</a>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("start-customization").addEventListener("click", function() {
+            window.location.href = "customization.html";
+        });
+    </script>
 </body>
 </html>
+
