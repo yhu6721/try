@@ -48,10 +48,7 @@ document.querySelectorAll(".prev-btn").forEach(button => {
 
 // 生成推荐配方按钮
 document.getElementById("generateBtn").addEventListener("click", function() {
-    window.location.hash = "#result";
-});
-
-// 分享按钮
-document.getElementById("shareBtn").addEventListener("click", function() {
-    alert("分享功能待实现！");
-});
+    // 获取用户选择的多选项
+    const selectedAtmosphere = Array.from(document.querySelectorAll("input[name='atmosphere']:checked")).map(checkbox => checkbox.value);
+    const selectedScent = Array.from(document.querySelectorAll("input[name='scent']:checked")).map(checkbox => checkbox.value);
+    const selectedOccasion = Array.from(document.querySelect
