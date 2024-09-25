@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推荐配方</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>推荐配方</h1>
+    </header>
+
+    <main>
+        <section class="recommendation">
+            <h2>根据您的选择，我们推荐以下配方</h2>
+            <div class="card">
+                <h3>配方 1: 柑橘 + 木香 + 麝香</h3>
+                <p>适合清新自然的气息，适用于日常和工作场合。</p>
+            </div>
+            <div class="card">
+                <h3>配方 2: 花香 + 果香 + 琥珀</h3>
+                <p>甜美诱人的香气，带有悠长的东方韵味。</p>
+            </div>
+            <div class="card">
+                <h3>配方 3: 薄荷 + 辛香 + 香草</h3>
+                <p>独特而清爽，适合晚间聚会或特殊场合。</p>
+            </div>
+            <br>
+            <button onclick="generateCard()">生成卡片</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 香水层次感设置. 版权所有.</p>
+    </footer>
+
+    <script>
+        function generateCard() {
+            window.location.href = "success.html";
+        }
+    </script>
+</body>
+</html>
