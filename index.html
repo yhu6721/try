@@ -1,83 +1,44 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>定制你的专属香水</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>香水定制</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- 首页 -->
-    <section id="home" class="section">
-        <h1>你的专属定制香水</h1>
-        <button id="startBtn">立即定制</button>
-    </section>
-
-    <!-- 定制页面 -->
-    <section id="customization" class="section hidden">
-        <!-- 问题1：香水的整体氛围（多选） -->
-        <div class="question" id="question1">
-            <h2>你希望香水的整体氛围如何？</h2>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="atmosphere" value="清新活力"> 清新活力</label>
-                <label><input type="checkbox" name="atmosphere" value="温暖柔和"> 温暖柔和</label>
-                <label><input type="checkbox" name="atmosphere" value="优雅经典"> 优雅经典</label>
-                <label><input type="checkbox" name="atmosphere" value="神秘深邃"> 神秘深邃</label>
-                <label><input type="checkbox" name="atmosphere" value="甜美轻快"> 甜美轻快</label>
-            </div>
-            <button class="next-btn" data-next="#question2">下一步</button>
-        </div>
-
-        <!-- 问题2：香调偏好（多选） -->
-        <div class="question hidden" id="question2">
-            <h2>你更喜欢哪种香调？</h2>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="scent" value="花香调"> 花香调</label>
-                <label><input type="checkbox" name="scent" value="果香调"> 果香调</label>
-                <label><input type="checkbox" name="scent" value="木香调"> 木香调</label>
-                <label><input type="checkbox" name="scent" value="东方调"> 东方调</label>
-                <label><input type="checkbox" name="scent" value="清新调"> 清新调</label>
-            </div>
-            <button class="prev-btn" data-prev="#question1">上一步</button>
-            <button class="next-btn" data-next="#question3">下一步</button>
-        </div>
-
-        <!-- 问题3：主要使用场合（多选） -->
-        <div class="question hidden" id="question3">
-            <h2>主要使用场合是什么？</h2>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="occasion" value="日常"> 日常</label>
-                <label><input type="checkbox" name="occasion" value="约会"> 约会</label>
-                <label><input type="checkbox" name="occasion" value="正式场合"> 正式场合</label>
-                <label><input type="checkbox" name="occasion" value="派对"> 派对</label>
-                <label><input type="checkbox" name="occasion" value="运动休闲"> 运动休闲</label>
-            </div>
-            <button class="prev-btn" data-prev="#question2">上一步</button>
-            <button class="next-btn" data-next="#question4">下一步</button>
-        </div>
-
-        <!-- 问题4：香水层次感设置（滑动条） -->
-        <div class="question hidden" id="question4">
-            <h2>香水层次感设置</h2>
-            <div class="slider-group">
-                <label>前调 (0%-100%)：清新果香、柑橘等 <input type="range" id="topNote" min="0" max="100" value="50"></label>
-                <label>中调 (0%-100%)：花香、温暖香 <input type="range" id="middleNote" min="0" max="100" value="50"></label>
-                <label>后调 (0%-100%)：木香、深邃香 <input type="range" id="baseNote" min="0" max="100" value="50"></label>
-            </div>
-            <button class="prev-btn" data-prev="#question3">上一步</button>
-            <button id="generateBtn">生成推荐配方</button>
-        </div>
-
-        <!-- 推荐配方展示 -->
-        <div class="hidden" id="result">
-            <h2>推荐配方</h2>
-            <p><strong>前调:</strong> 柑橘50%，葡萄柚30%</p>
-            <p><strong>中调:</strong> 玫瑰40%，橙花20%</p>
-            <p><strong>后调:</strong> 檀香30%，龙涎香20%</p>
-            <button id="shareBtn">分享定制香水</button>
+    <section id="home">
+        <div class="container">
+            <h1>首页</h1>
+            <button onclick="goToSection('customize')">开始定制</button>
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <!-- 香水定制 -->
+    <section id="customize" class="hidden">
+        <div class="container">
+            <h1>香水定制</h1>
+            <button onclick="goToSection('next')">下一步</button>
+        </div>
+    </section>
+
+    <!-- 下一步 -->
+    <section id="next" class="hidden">
+        <div class="container">
+            <h1>下一步</h1>
+            <button onclick="goToSection('recommend')">推荐配方</button>
+        </div>
+    </section>
+
+    <!-- 推荐配方 -->
+    <section id="recommend" class="hidden">
+        <div class="container">
+            <h1>推荐配方</h1>
+            <a href="https://group3iticket.my.canvasite.cn/" target="_blank" class="button">生成卡片</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
