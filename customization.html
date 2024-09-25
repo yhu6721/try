@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香水定制 - 设置层次感</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>香水层次感设置</h1>
+    </header>
+
+    <main>
+        <section class="customization">
+            <h2>设置您的香水层次感</h2>
+            <form id="perfume-form">
+                <label for="top-notes">选择前调:</label>
+                <select id="top-notes">
+                    <option value="citrus">柑橘</option>
+                    <option value="mint">薄荷</option>
+                    <option value="floral">花香</option>
+                </select>
+                <br><br>
+
+                <label for="middle-notes">选择中调:</label>
+                <select id="middle-notes">
+                    <option value="spicy">辛香</option>
+                    <option value="woody">木香</option>
+                    <option value="fruit">果香</option>
+                </select>
+                <br><br>
+
+                <label for="base-notes">选择基调:</label>
+                <select id="base-notes">
+                    <option value="vanilla">香草</option>
+                    <option value="musk">麝香</option>
+                    <option value="amber">琥珀</option>
+                </select>
+                <br><br>
+
+                <button type="button" id="next-step">下一步</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 香水层次感设置. 版权所有.</p>
+    </footer>
+
+    <script>
+        document.getElementById("next-step").addEventListener("click", function() {
+            window.location.href = "recommendation.html";
+        });
+    </script>
+</body>
+</html>
